@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            background color changer
+        </title>
+        <style>
+            body{
+                text-align: center;
+            }
+        </style>
+        </head>
+        <body>
+        <div id="background" style="size: 500px;">
+            <button onclick="ch()">click to change the color</button>
+        </div>
+        <script>
+            function ch(){
+                let bg = document.getElementById('background');
+    console.log(bg);
+    let colors = ["red", "green", "blue", "yellow","powderblue"];
+
+    const colorIndex = parseInt(Math.random()*colors.length);
+    bg.style.backgroundColor = colors[colorIndex];
+            }
+        </script>
+    
+</body>
+</html>
