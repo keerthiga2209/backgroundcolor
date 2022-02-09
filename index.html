@@ -8,20 +8,35 @@
             body{
                 text-align: center;
             }
+            button{
+                font-size: 45px;
+                background-color: black;
+                color: blanchedalmond;
+                width: 220px;
+                height: 300px;
+                font-family: 'Times New Roman', Times, serif;
+                border-radius: 8px;
+                
+            }
+            .btn:hover{background-color: chartreuse;
+            color: cornflowerblue;}
+
+    
         </style>
         </head>
         <body>
         <div id="background" style="size: 500px;">
-            <button onclick="ch()">click to change the color</button>
+            <button class="btn" onclick="ch()">click to change the color</button>
         </div>
         <script>
             function ch(){
+                const body = document.querySelector('body');
                 let bg = document.getElementById('background');
     console.log(bg);
     let colors = ["red", "green", "blue", "yellow","powderblue"];
 
     const colorIndex = parseInt(Math.random()*colors.length);
-    bg.style.backgroundColor = colors[colorIndex];
+    body.style.backgroundColor = colors[colorIndex];
             }
         </script>
     
